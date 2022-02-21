@@ -1,0 +1,46 @@
+<html>
+<head>
+    <style>
+        body {
+            font-family: 'Verdana';
+            margin: 20px;
+        }
+
+        img {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Example facts API</h1>
+
+    <h2>Random facts</h2>
+    <p>Random fact at <a href="" id="fact-api"></a></p>
+
+    <h2>fact Images</h2>
+
+    <p>fact images at (for example) <a href="" id="fact-img"></a></p>
+
+    <img id="example-img">
+
+</body>
+
+<script>
+
+    let url = document.location.href 
+    let factURL = url + 'api/randomfact'
+    let apiHome = document.querySelector('#fact-api')
+    apiHome.innerHTML = factURL
+    apiHome.href = factURL
+
+    let factImg = url + 'img/lake.jpeg'
+    let apiImg = document.querySelector('#fact-img')
+    apiImg.innerHTML = factImg
+    apiImg.href = factImg
+
+    let exampleImage = document.querySelector('#example-img')
+    exampleImage.src = factImg
+
+</script>
+</html>
